@@ -1,0 +1,84 @@
+body{
+    margin:60px auto;
+    padding:0;
+    font-family:arial;
+    text-align:center;
+  }
+  button{
+    margin:0;
+    padding:20px 30px;
+    background:#333;
+    border:0;
+    outline:none;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    transition: all 200ms ease-in-out;
+  }
+  button:hover{
+    background:#222;
+  }
+  
+  /*   Modaal venster open  */
+  .modaal{
+    display:none;
+    position:fixed;
+    z-index:9999999;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+  }
+  .modaal.open{
+    display:block;
+  }
+  
+  .modaal-inner{
+    width:300px;
+    height:200px;
+    background:#fff;
+    position:relative;
+    z-index:9999998;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius:3px;
+    box-shadow:0 2px 14px rgba(0,0,0,.7);
+  }
+  .modaal-sluit{
+    position:absolute;
+    z-index:9999997;
+    top:0;
+    right:0;
+    width:30px;
+    height:30px;
+    font-size:30px;
+    line-height:30px;
+    text-align:center;
+    cursor:pointer;
+    transition: all 200ms ease-in-out;
+  }
+  .modaal-sluit:hover{
+    transform:rotate(-90deg);
+  }
+  .modaal-content{
+    padding:20px;
+  }
+  
+  /*   Modaal venster sluit   */
+  .verlaat{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:25px;
+    background:transparent;
+    background:#3e3e3e;
+    line-height:25px;
+  }
+  .verlaat:before{
+    content:'Hover me';
+    color:#fff;
+    font-size:10px;
+  }
